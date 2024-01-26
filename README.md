@@ -16,7 +16,7 @@ Run the command
 ```
 ./with-var-set local-dev [command to run your app]
 ```
-Alternatively you can create alias in you shell or link it directly included in `PATH` variable
+Alternatively you can create alias in you shell or symlink it to dir included in `PATH` variable
 ```
 with-var-set local-dev [command to run your app]
 ```

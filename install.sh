@@ -1,2 +1,2 @@
 #!/bin/bash
-ln -s ./with-var-set /usr/local/bin/with-var-set
+ln -s "$(readlink -f ./with-var-set.bb)" /usr/local/bin/with-var-set

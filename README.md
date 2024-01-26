@@ -14,8 +14,13 @@ Create a configuration file `~/.var-sets.edn`
 ```
 Run the command
 ```
+./with-var-set local-dev [command to run your app]
+```
+Alternatively you can create alias in you shell or link it directly included in `PATH` variable
+```
 with-var-set local-dev [command to run your app]
 ```
+
 This is equivalent to:
 ```bash
 FOO_API_KEY=vNmhYZt3fAP2swEJtQJGo_opGpBidulZsvc \

@@ -56,6 +56,18 @@
          [var-name escaped-var-value])
        (into {})))
 
+(defn parse-args [args]
+  (->> args
+       (reduce (fn [acc string-arg]
+                 (let [{:keys [sets args]} acc
+                       arg (edn/read-string string-arg)]
+                   (if (keyword? arg)
+                     {:sets (conj sets arg)
+                      :args (rest args)}
+                     (reduced acc))))
+               {:sets []
+                :args args})))
+
 (defn -main [args]
   (let [[var-set-name & rest-args] args
         config (read-config)
